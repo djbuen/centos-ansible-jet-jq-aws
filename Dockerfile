@@ -7,3 +7,7 @@ RUN chmod +x /usr/local/bin/jet
 RUN wget http://stedolan.github.io/jq/download/linux64/jq
 RUN chmod +x ./jq
 RUN cp jq /usr/bin
+
+RUN wget http://repo.mysql.com/mysql-community-release-el6-5.noarch.rpm
+RUN rpm -Uvh mysql-community-release-el6-5.noarch.rpm
+RUN yum -y install mysql mysql-server
