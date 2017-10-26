@@ -11,3 +11,7 @@ RUN cp jq /usr/bin
 RUN wget http://repo.mysql.com/mysql-community-release-el6-5.noarch.rpm
 RUN rpm -Uvh mysql-community-release-el6-5.noarch.rpm
 RUN yum -y install mysql mysql-server
+
+RUN yum remove git -y
+RUN yum install http://opensource.wandisco.com/centos/6/git/x86_64/wandisco-git-release-6-1.noarch.rpm -y
+RUN yum install git -y
