@@ -15,3 +15,5 @@ RUN yum -y install mysql mysql-server
 RUN yum remove git -y
 RUN yum install http://opensource.wandisco.com/centos/6/git/x86_64/wandisco-git-release-6-1.noarch.rpm -y
 RUN yum install git -y
+
+RUN pip install awscli --upgrade --user
