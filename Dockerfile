@@ -1,6 +1,6 @@
 FROM ramkumarb/centos-aws:latest
 
-RUN yum install epel-release -y
+RUN yum install epel-release -y && yum install ansible -y
 RUN curl -SLO "https://s3.amazonaws.com/codeship-jet-releases/1.19.3/jet-linux_amd64_1.19.3.tar.gz"
 RUN tar -xaC /usr/local/bin -f jet-linux_amd64_1.19.3.tar.gz
 RUN chmod +x /usr/local/bin/jet
@@ -17,6 +17,3 @@ RUN yum install http://opensource.wandisco.com/centos/6/git/x86_64/wandisco-git-
 RUN yum install git -y
 
 RUN pip install awscli --upgrade --user
-
-RUN easy_install pip
-RUN pip install ansible
