@@ -17,4 +17,8 @@ RUN yum install http://opensource.wandisco.com/centos/6/git/x86_64/wandisco-git-
 RUN yum install git -y
 
 RUN pip install awscli --upgrade --user
-RUN pip install 'ansible==2.4.1.0'
+
+RUN git clone https://github.com/ansible/ansible.git
+RUN cd ./ansible
+RUN make rpm
+RUN rpm -Uvh ./rpm-build/ansible-*.noarch.rpm
