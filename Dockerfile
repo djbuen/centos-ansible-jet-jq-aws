@@ -18,7 +18,5 @@ RUN yum install git -y
 
 RUN pip install awscli --upgrade --user
 
-RUN git clone https://github.com/ansible/ansible.git
-RUN cd ./ansible
-RUN make rpm
-RUN rpm -Uvh ./rpm-build/ansible-*.noarch.rpm
+RUN easy_install pip
+RUN pip install ansible
