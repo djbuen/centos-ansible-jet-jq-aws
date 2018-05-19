@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:6
 
 ###GET LATEST EPEL-RELEASE###
 RUN yum install epel-release -y
@@ -20,8 +20,8 @@ RUN cp jq /usr/bin
 RUN yum -y install initscripts
 
 ###INSTALL MYSQL###
-RUN wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
-RUN rpm -ivh mysql-community-release-el7-5.noarch.rpm
+RUN wget http://repo.mysql.com/mysql-community-release-el6-5.noarch.rpm
+RUN rpm -Uvh mysql-community-release-el6-5.noarch.rpm
 RUN yum -y install mysql mysql-server
 
 ###INSTALL GIT###
