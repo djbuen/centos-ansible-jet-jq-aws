@@ -17,8 +17,8 @@ RUN chmod +x ./jq
 RUN cp jq /usr/bin
 
 ###INSTALL MYSQL###
-RUN wget http://repo.mysql.com/mysql-community-release-el6-5.noarch.rpm
-RUN rpm -Uvh mysql-community-release-el6-5.noarch.rpm
+RUN wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+RUN rpm -ivh mysql-community-release-el7-5.noarch.rpm
 RUN yum -y install mysql mysql-server
 
 ###INSTALL GIT###
