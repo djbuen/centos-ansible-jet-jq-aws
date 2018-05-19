@@ -1,4 +1,4 @@
-FROM centos:6
+FROM centos:7
 
 ###GET LATEST EPEL-RELEASE###
 RUN yum install epel-release -y
