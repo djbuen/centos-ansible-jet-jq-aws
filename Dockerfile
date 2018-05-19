@@ -16,6 +16,9 @@ RUN wget http://stedolan.github.io/jq/download/linux64/jq
 RUN chmod +x ./jq
 RUN cp jq /usr/bin
 
+###INSTALL SERVICE COMMAND###
+RUN yum -y install initscripts
+
 ###INSTALL MYSQL###
 RUN wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
 RUN rpm -ivh mysql-community-release-el7-5.noarch.rpm
