@@ -20,7 +20,7 @@ RUN cp jq /usr/bin
 RUN yum -y install initscripts
 
 ###INSTALL MYSQL###
-wget http://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
+RUN wget http://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
 RUN rpm -Uvh mysql57-community-release-el7-9.noarch.rpm
 RUN yum -y install mysql-server
 
