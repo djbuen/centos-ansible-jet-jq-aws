@@ -43,3 +43,5 @@ RUN pip install ansible
 # RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 RUN yum install -y php56w php56w-opcache php56w-fpm php56w-mbstring php56w-mysql php56w-pdo php56w-pecl-memcache php56w-xml php56w-pecl-memcached php56w-pecl-redis
+
+RUN npm install phantomjs -g
