@@ -45,3 +45,5 @@ RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 RUN yum install -y php56w php56w-opcache php56w-fpm php56w-mbstring php56w-mysql php56w-pdo php56w-pecl-memcache php56w-xml php56w-pecl-memcached php56w-pecl-redis
 
 RUN npm install phantomjs -g
+RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+RUN yum install -y nodejs
